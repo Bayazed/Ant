@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery.js"></script>
+	<script src="function.js"></script>
+	<meta charset="utf-8">
+	<title>Муравей</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+
+	<table border="1" >
+		<script type="text/javascript">
+			var i, j, x = 9, y = 21;
+			var flag = true;
+			
+			for (i = 0; i < 20; i++)
+			{
+				document.write("<tr>");
+				
+				for (j = 0; j < 43; j++)
+				{	
+					document.write("<td id=" + "kl_" + i + "_" + j +" class='white'></td>");										
+				}
+				
+				document.write("</tr>");			
+			}
+			document.getElementById("kl_" + x + "_" + y).innerHTML = "<img id='img' src='car1.png'>";			
+		</script>		
+	</table>
+
+
+	<br><br>	
+	<form method="POST" action=""> 
+		<input type="button" value="Start" id="start">
+	</form>
+
+	<script type="text/javascript">
+		document.getElementById('start').onclick = function()
+			{				
+				StepVer(x, y, flag);
+			}
+	</script>																				
+</body>
+</html>
+
